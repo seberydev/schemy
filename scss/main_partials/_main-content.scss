@@ -1,0 +1,118 @@
+/* MAIN CONTENT STYLES */
+.main-container {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 3fr 9fr;
+	grid-template-rows: 1fr;
+	background: orange;
+
+	/* HEADER */
+	header {
+		h1 {
+			font-family: 'Pacifico', cursive;
+			padding: 3px 0 3px 20px;
+		}
+	}
+
+	/* TEMPLATE ELEMENTS STYLES */
+	.elements-container {
+		background: #f6bed6;
+		display: grid;
+		grid-template-rows: 70px 9fr 3fr;
+
+		.elements {
+			ul {
+				width: 100%;
+				background: #e79cc2;
+
+				li {
+					padding: 0 0 0 20px;
+					display: grid;
+					grid-template-rows: 70px;
+					grid-template-columns: 9fr 3fr;
+
+					p {
+						align-self: center;
+					}
+				}
+			}
+		}
+
+		.about-container {
+			background: #336d88;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+	}
+
+	.template-container {
+		background: #1d1b38;
+	}
+}
+
+
+/* OTHER ELEMENTS STYLES */
+.elements-container {
+
+	/* TEMPLATE SELECTOR STYLES */
+	.template-selector-container {
+		position: absolute;
+		top: 30px;
+		right: 100px;
+
+		option, select {
+			background: #e79cc2;
+			padding: 5px 10px;
+			border-radius: 5px;
+			cursor: pointer;
+			border: none;
+		}
+
+	}
+
+	/* COLOR SELECTOR STYLES */
+	.color-selector-container {
+		position: absolute;
+		bottom: 30px;
+		right: 100px;
+		background: #336d88;
+		padding: 15px;
+		border-radius: 5px;
+
+		ul {
+			display: flex;
+
+			li {
+				display: flex;
+				flex-direction: column;
+				width: 70px;
+				margin: 0 10px;
+
+				button {
+					height: 60px;
+					border-radius: 5px;
+					position: relative;
+
+					span {
+						position: absolute;
+						bottom: 0;
+						right: 6px;
+					}
+				}
+
+				input {
+					padding: 3px;
+					border-radius: 5px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+

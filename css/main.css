@@ -1,0 +1,120 @@
+/* GENERAL SELECTORS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+body {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* MAIN CONTENT STYLES */
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 1fr;
+  background: orange;
+  /* HEADER */
+  /* TEMPLATE ELEMENTS STYLES */
+}
+.main-container header h1 {
+  font-family: "Pacifico", cursive;
+  padding: 3px 0 3px 20px;
+}
+.main-container .elements-container {
+  background: #f6bed6;
+  display: grid;
+  grid-template-rows: 70px 9fr 3fr;
+}
+.main-container .elements-container .elements ul {
+  width: 100%;
+  background: #e79cc2;
+}
+.main-container .elements-container .elements ul li {
+  padding: 0 0 0 20px;
+  display: grid;
+  grid-template-rows: 70px;
+  grid-template-columns: 9fr 3fr;
+}
+.main-container .elements-container .elements ul li p {
+  align-self: center;
+}
+.main-container .elements-container .about-container {
+  background: #336d88;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .template-container {
+  background: #1d1b38;
+}
+
+/* OTHER ELEMENTS STYLES */
+.elements-container {
+  /* TEMPLATE SELECTOR STYLES */
+  /* COLOR SELECTOR STYLES */
+}
+.elements-container .template-selector-container {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+.elements-container .template-selector-container option, .elements-container .template-selector-container select {
+  background: #e79cc2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+.elements-container .color-selector-container {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  background: #336d88;
+  padding: 15px;
+  border-radius: 5px;
+}
+.elements-container .color-selector-container ul {
+  display: flex;
+}
+.elements-container .color-selector-container ul li {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  margin: 0 10px;
+}
+.elements-container .color-selector-container ul li button {
+  height: 60px;
+  border-radius: 5px;
+  position: relative;
+}
+.elements-container .color-selector-container ul li button span {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+}
+.elements-container .color-selector-container ul li input {
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

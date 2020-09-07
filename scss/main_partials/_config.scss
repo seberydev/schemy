@@ -1,0 +1,24 @@
+/* GENERAL SELECTORS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+body {
+	width: 100%;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+input {
+	border: none;
+}
+
+ul {
+	list-style: none;
+}
