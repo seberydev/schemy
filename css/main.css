@@ -119,4 +119,42 @@ ul {
   margin-top: 10px;
 }
 
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 900px) {
+  /* MAIN CONTENT STYLES */
+  .main-container {
+    grid-template-rows: 3fr 9fr;
+    grid-template-columns: 1fr;
+  }
+
+  /* OTHER ELEMENTS STYLES */
+  .elements-container {
+    /* TEMPLATE SELECTOR STYLES */
+    /* COLOR SELECTOR STYLES */
+  }
+  .elements-container .template-selector-container {
+    right: 10px;
+    top: 25px;
+  }
+  .elements-container .color-selector-container {
+    left: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    max-width: 360px;
+    transform: translateX(-50%);
+  }
+  .elements-container .color-selector-container ul {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .elements-container .color-selector-container ul li {
+    width: 15%;
+  }
+  .elements-container .color-selector-container ul li button {
+    height: 40px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

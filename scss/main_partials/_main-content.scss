@@ -120,3 +120,52 @@
 
 
 
+/* RESPONSIVE STYLES */
+
+@media screen and (max-width: 900px) {
+
+	/* MAIN CONTENT STYLES */
+	.main-container {
+		grid-template-rows: 3fr 9fr;
+		grid-template-columns: 1fr;
+	}
+
+	/* OTHER ELEMENTS STYLES */
+	.elements-container {
+
+		/* TEMPLATE SELECTOR STYLES */
+		.template-selector-container {
+			right: 10px;
+			top: 25px;
+		}
+
+		/* COLOR SELECTOR STYLES */
+		.color-selector-container {
+			left: 50%;
+			width: 90%;
+			display: flex;
+			justify-content: center;
+			max-width: 360px;
+			transform: translateX(-50%);
+
+			ul {
+				width: 100%;
+				justify-content: center;
+				flex-wrap: nowrap;
+
+				li {
+					width: 15%;
+
+					button {
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+

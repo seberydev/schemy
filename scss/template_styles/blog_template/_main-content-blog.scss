@@ -9,6 +9,7 @@
 /* BLOG TEMPLATE STYLES */
 
 .blog-template {
+	display: none;
 	background: white;
 	padding-bottom: 50px;
 
@@ -134,6 +135,67 @@
 
 	}
 
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 600px) {
+
+	/* BLOG TEMPLATE STYLES */
+	.blog-template {
+
+		/* NAVBAR */
+		nav {
+			ul {
+				width: 90%;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				li {
+					margin: 5px 15px;
+				}
+			}
+		}
+
+		/* LATEST BLOGS STYLES */
+		.latest-blogs-container {
+
+			.card-blog-item {
+				width: 90%;
+				flex-direction: column;
+				margin: 15px auto;
+				padding: 15px;
+
+				img {
+					max-width: 150px;
+				}
+
+				.card-info {
+					padding: 0;
+
+					h3 {
+						width: 100%;
+						text-align: left;
+						margin: 10px 0;
+					}
+				}
+
+				.card-user-info {
+					@include config-blog.user-info;
+				}
+			}
+		}
+
+		/* CURRENT BLOG STYLES */
+		.current-blog-container {
+
+			.main-blog-image {
+				width: 80%;
+			}
+		}
 
 
+
+
+
+	}
 }

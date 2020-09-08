@@ -15,6 +15,7 @@ a {
 */
 /* BLOG TEMPLATE STYLES */
 .blog-template {
+  display: none;
   background: white;
   padding-bottom: 50px;
   /* NAVBAR */
@@ -137,6 +138,57 @@ a {
 .blog-template .current-blog-container .blog-text-container p {
   margin: 20px 0;
   width: 90%;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 600px) {
+  /* BLOG TEMPLATE STYLES */
+  .blog-template {
+    /* NAVBAR */
+    /* LATEST BLOGS STYLES */
+    /* CURRENT BLOG STYLES */
+  }
+  .blog-template nav ul {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blog-template nav ul li {
+    margin: 5px 15px;
+  }
+  .blog-template .latest-blogs-container .card-blog-item {
+    width: 90%;
+    flex-direction: column;
+    margin: 15px auto;
+    padding: 15px;
+  }
+  .blog-template .latest-blogs-container .card-blog-item img {
+    max-width: 150px;
+  }
+  .blog-template .latest-blogs-container .card-blog-item .card-info {
+    padding: 0;
+  }
+  .blog-template .latest-blogs-container .card-blog-item .card-info h3 {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+  }
+  .blog-template .latest-blogs-container .card-blog-item .card-user-info {
+    display: flex;
+    align-items: center;
+  }
+  .blog-template .latest-blogs-container .card-blog-item .card-user-info div {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+  }
+  .blog-template .latest-blogs-container .card-blog-item .card-user-info div img {
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  .blog-template .current-blog-container .main-blog-image {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=main-blog.css.map */
