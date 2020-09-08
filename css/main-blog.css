@@ -1,0 +1,142 @@
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* MIXINS */
+/*
+	TEMPLATE EXAMPLE URL: https://www.uplabs.com/posts/mobile-blog-app-design
+*/
+/* BLOG TEMPLATE STYLES */
+.blog-template {
+  background: white;
+  padding-bottom: 50px;
+  /* NAVBAR */
+  /* LATEST BLOGS STYLES */
+  /* CURRENT BLOG STYLES */
+}
+.blog-template nav {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.blog-template nav::after {
+  content: "";
+  position: relative;
+  width: 50%;
+  height: 3px;
+  background: pink;
+  bottom: 0;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+.blog-template nav ul {
+  display: flex;
+  margin-top: 10px;
+}
+.blog-template nav ul li {
+  margin: 0 15px;
+}
+.blog-template nav ul li a {
+  color: black;
+}
+.blog-template .latest-blogs-container {
+  width: 90%;
+  margin: 0 auto;
+  background: #fbe2e5;
+  padding: 20px;
+}
+.blog-template .latest-blogs-container .card-blog-item {
+  display: flex;
+  margin: 10px 0;
+  padding: 15px 0 15px 15px;
+  position: relative;
+  background: white;
+  width: 60%;
+}
+.blog-template .latest-blogs-container .card-blog-item::before {
+  content: "";
+  background: pink;
+  width: 10px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blog-template .latest-blogs-container .card-blog-item::after {
+  content: "";
+  background: pink;
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blog-template .latest-blogs-container .card-blog-item .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 0 0 20px;
+}
+.blog-template .latest-blogs-container .card-blog-item .card-info h3 {
+  width: 60%;
+}
+.blog-template .latest-blogs-container .card-blog-item .card-info .card-user-info {
+  display: flex;
+  align-items: center;
+}
+.blog-template .latest-blogs-container .card-blog-item .card-info .card-user-info div {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.blog-template .latest-blogs-container .card-blog-item .card-info .card-user-info div img {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.blog-template .current-blog-container {
+  width: 90%;
+  margin: 20px auto;
+}
+.blog-template .current-blog-container .main-blog-image {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.blog-template .current-blog-container h2 {
+  width: 90%;
+  margin: 20px 0;
+}
+.blog-template .current-blog-container .blog-user-info {
+  display: flex;
+  align-items: center;
+  background: #fbe2e5;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: left;
+}
+.blog-template .current-blog-container .blog-user-info div {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.blog-template .current-blog-container .blog-user-info div img {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.blog-template .current-blog-container .blog-text-container p {
+  margin: 20px 0;
+  width: 90%;
+}
+
+/*# sourceMappingURL=main-blog.css.map */

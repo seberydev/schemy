@@ -65,6 +65,8 @@ ul {
 }
 .main-container .template-container {
   background: #1d1b38;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 /* OTHER ELEMENTS STYLES */
