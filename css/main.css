@@ -34,9 +34,9 @@ ul {
   /* HEADER */
   /* TEMPLATE ELEMENTS STYLES */
 }
-.main-container header h1 {
+.main-container .elements-header h1 {
   font-family: "Pacifico", cursive;
-  padding: 3px 0 3px 20px;
+  padding: 10px 0 0 20px;
 }
 .main-container .elements-container {
   background: #f6bed6;

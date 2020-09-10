@@ -1,0 +1,30 @@
+/* LANDING PAGE TEMPLATE STYLES */
+.landing-page-template {
+  /* NAVBAR STYLES */
+}
+.landing-page-template nav {
+  width: 100%;
+  background: darkblue;
+  padding: 18px 0;
+}
+.landing-page-template nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.landing-page-template nav div h1 {
+  color: white;
+}
+.landing-page-template nav div ul {
+  display: flex;
+}
+.landing-page-template nav div ul li {
+  margin: 0 10px;
+}
+.landing-page-template nav div ul li a {
+  color: white;
+}
+
+/*# sourceMappingURL=main-lp.css.map */

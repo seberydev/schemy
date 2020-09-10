@@ -1,0 +1,36 @@
+/* LANDING PAGE TEMPLATE STYLES */
+.landing-page-template {
+
+	/* NAVBAR STYLES */
+	nav {
+		width: 100%;
+		background: darkblue;
+		padding: 18px 0;
+		
+
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 90%;
+			margin: 0 auto;
+
+			h1 {
+				color: white;
+			}
+
+			ul {
+				display: flex;
+
+				li {
+					margin: 0 10px;
+
+					a {
+						color: white;
+					}
+				}
+			}
+		}
+
+	}
+}
