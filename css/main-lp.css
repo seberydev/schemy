@@ -1,6 +1,12 @@
+/* MIXINS */
 /* LANDING PAGE TEMPLATE STYLES */
 .landing-page-template {
   /* NAVBAR STYLES */
+  /* HEADER SECTION */
+  /* FEATURES SECTION */
+  /* INNOVATIONS SECTION */
+  /* PRICES SECTION */
+  /* TESTIMONIALS SECTION */
 }
 .landing-page-template nav {
   width: 100%;
@@ -21,10 +27,279 @@
   display: flex;
 }
 .landing-page-template nav div ul li {
-  margin: 0 10px;
+  margin: 20px;
 }
 .landing-page-template nav div ul li a {
   color: white;
+}
+.landing-page-template header {
+  background: darkslateblue;
+  width: 100%;
+}
+.landing-page-template header .content {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 20px;
+}
+.landing-page-template header .header-image {
+  display: flex;
+  justify-content: center;
+}
+.landing-page-template header .header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.landing-page-template header .header-info p {
+  margin: 20px 0;
+}
+.landing-page-template header .header-info a {
+  background: darkslateblue;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 2px 2px black;
+  align-self: flex-start;
+}
+.landing-page-template .features-container {
+  background: white;
+}
+.landing-page-template .features-container .content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.landing-page-template .features-container .content .features-info {
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+  color: black;
+}
+.landing-page-template .features-container .content .features-info hr {
+  color: darkblue;
+  width: 35%;
+  margin: 20px auto;
+}
+.landing-page-template .features-container .content .features-info p {
+  width: 65%;
+  margin: 0 auto;
+}
+.landing-page-template .features-container .content .features-content {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.landing-page-template .features-container .content .features-content .first-info div,
+.landing-page-template .features-container .content .features-content .second-info div {
+  margin: 35px 0;
+}
+.landing-page-template .features-container .content .features-content .first-info div h3,
+.landing-page-template .features-container .content .features-content .second-info div h3 {
+  margin-bottom: 20px;
+}
+.landing-page-template .features-container .content .features-content .image {
+  padding: 0 20px;
+}
+.landing-page-template .innovation-container {
+  background: darkslateblue;
+}
+.landing-page-template .innovation-container .content {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page-template .innovation-container .content .info {
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+  color: white;
+}
+.landing-page-template .innovation-container .content .info hr {
+  color: white;
+  width: 35%;
+  margin: 20px auto;
+}
+.landing-page-template .innovation-container .content .info p {
+  width: 65%;
+  margin: 0 auto;
+}
+.landing-page-template .innovation-container .content img {
+  margin: 20px 0;
+}
+.landing-page-template .innovation-container .content a {
+  background: darkslateblue;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 2px 2px black;
+  margin-bottom: 20px;
+}
+.landing-page-template .prices-container {
+  background: white;
+}
+.landing-page-template .prices-container .content {
+  padding: 20px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landing-page-template .prices-container .content .info {
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+  color: black;
+}
+.landing-page-template .prices-container .content .info hr {
+  color: darkblue;
+  width: 35%;
+  margin: 20px auto;
+}
+.landing-page-template .prices-container .content .info p {
+  width: 65%;
+  margin: 0 auto;
+}
+.landing-page-template .prices-container .content .prices-content ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+}
+.landing-page-template .prices-container .content .prices-content ul li {
+  text-align: center;
+  margin: 20px;
+  border: 4px solid #96969680;
+  padding: 20px;
+}
+.landing-page-template .prices-container .content .prices-content ul li .benefits {
+  margin-bottom: 35px;
+}
+.landing-page-template .prices-container .content .prices-content ul li .benefits p {
+  margin: 15px 0;
+}
+.landing-page-template .prices-container .content .prices-content ul li .price-text {
+  margin: 20px 0;
+}
+.landing-page-template .prices-container .content .prices-content ul li a {
+  background: darkslateblue;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 2px 2px black;
+}
+.landing-page-template .testimonials-container {
+  background: darkslateblue;
+  padding-bottom: 40px;
+}
+.landing-page-template .testimonials-container .content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landing-page-template .testimonials-container .content .title {
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+  color: white;
+}
+.landing-page-template .testimonials-container .content .title hr {
+  color: white;
+  width: 35%;
+  margin: 20px auto;
+}
+.landing-page-template .testimonials-container .content .title p {
+  width: 65%;
+  margin: 0 auto;
+}
+.landing-page-template .testimonials-container .content .testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.landing-page-template .testimonials-container .content .testimonial .person-text {
+  width: 60%;
+  margin: 0 auto;
+}
+.landing-page-template .testimonials-container .content .testimonial .name {
+  margin: 15px 0;
+}
+.landing-page-template .testimonials-container .content .testimonial hr {
+  color: white;
+  width: 50%;
+  margin: 20px auto;
+}
+.landing-page-template .testimonials-container .content .testimonial img {
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+  /* LANDING PAGE TEMPLATE STYLES */
+  .landing-page-template {
+    /* NAVBAR STYLES */
+    /* HEADER SECTION */
+    /* FEATURES SECTION */
+  }
+  .landing-page-template nav div {
+    flex-direction: column;
+  }
+  .landing-page-template nav div ul {
+    margin-top: 20px;
+  }
+  .landing-page-template header .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .landing-page-template header .content a {
+    justify-self: center;
+  }
+  .landing-page-template .features-container .first-info,
+.landing-page-template .features-container .second-info {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* LANDING PAGE TEMPLATE STYLES */
+  .landing-page-template {
+    /* FEATURES SECTION */
+  }
+  .landing-page-template .features-container .features-content {
+    flex-direction: column;
+  }
+  .landing-page-template .features-container .features-content .first-info,
+.landing-page-template .features-container .features-content .second-info {
+    text-align: center;
+    display: flex;
+  }
+  .landing-page-template .features-container .features-content .first-info div,
+.landing-page-template .features-container .features-content .second-info div {
+    margin: 35px 0;
+  }
+  .landing-page-template .features-container .features-content .first-info div p,
+.landing-page-template .features-container .features-content .second-info div p {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .landing-page-template .features-container .features-content .first-info div h3,
+.landing-page-template .features-container .features-content .second-info div h3 {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=main-lp.css.map */

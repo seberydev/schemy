@@ -1,15 +1,12 @@
 @use "config-blog";
 
-
 /*
 	TEMPLATE EXAMPLE URL: https://www.uplabs.com/posts/mobile-blog-app-design
 */
 
-
 /* BLOG TEMPLATE STYLES */
 
 .blog-template {
-	display: none;
 	background: white;
 	padding-bottom: 50px;
 
@@ -62,7 +59,6 @@
 			position: relative;
 			background: white;
 			width: 60%;
-
 
 			&::before {
 				content: "";
@@ -131,18 +127,13 @@
 				width: 90%;
 			}
 		}
-
-
 	}
-
 }
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 600px) {
-
 	/* BLOG TEMPLATE STYLES */
 	.blog-template {
-
 		/* NAVBAR */
 		nav {
 			ul {
@@ -158,7 +149,6 @@
 
 		/* LATEST BLOGS STYLES */
 		.latest-blogs-container {
-
 			.card-blog-item {
 				width: 90%;
 				flex-direction: column;
@@ -187,15 +177,9 @@
 
 		/* CURRENT BLOG STYLES */
 		.current-blog-container {
-
 			.main-blog-image {
 				width: 80%;
 			}
 		}
-
-
-
-
-
 	}
 }

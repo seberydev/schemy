@@ -1,12 +1,37 @@
+/* MIXINS */
+@mixin classic-btn {
+	background: darkslateblue;
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: white;
+	box-shadow: 0px 2px 2px black;
+}
+
+@mixin title-content($hr-color, $text-color) {
+	text-align: center;
+	padding: 20px 0;
+	margin: 20px 0;
+	color: $text-color;
+
+	hr {
+		color: $hr-color;
+		width: 35%;
+		margin: 20px auto;
+	}
+
+	p {
+		width: 65%;
+		margin: 0 auto;
+	}
+}
+
 /* LANDING PAGE TEMPLATE STYLES */
 .landing-page-template {
-
 	/* NAVBAR STYLES */
 	nav {
 		width: 100%;
 		background: darkblue;
 		padding: 18px 0;
-		
 
 		div {
 			display: flex;
@@ -23,7 +48,7 @@
 				display: flex;
 
 				li {
-					margin: 0 10px;
+					margin: 20px;
 
 					a {
 						color: white;
@@ -31,6 +56,271 @@
 				}
 			}
 		}
+	}
 
+	/* HEADER SECTION */
+	header {
+		background: darkslateblue;
+		width: 100%;
+
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			padding: 20px;
+		}
+
+		.header-image {
+			display: flex;
+			justify-content: center;
+		}
+
+		.header-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: white;
+
+			p {
+				margin: 20px 0;
+			}
+
+			a {
+				@include classic-btn;
+				align-self: flex-start;
+			}
+		}
+	}
+
+	/* FEATURES SECTION */
+	.features-container {
+		background: white;
+
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+
+			.features-info {
+				@include title-content(darkblue, black);
+			}
+
+			.features-content {
+				margin: 20px 0;
+				display: flex;
+				align-items: center;
+
+				.first-info,
+				.second-info {
+					div {
+						margin: 35px 0;
+
+						h3 {
+							margin-bottom: 20px;
+						}
+					}
+				}
+
+				.image {
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+
+	/* INNOVATIONS SECTION */
+	.innovation-container {
+		background: darkslateblue;
+
+		.content {
+			padding: 40px 0;
+			width: 90%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.info {
+				@include title-content(white, white);
+			}
+
+			img {
+				margin: 20px 0;
+			}
+
+			a {
+				@include classic-btn();
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	/* PRICES SECTION */
+	.prices-container {
+		background: white;
+
+		.content {
+			padding: 20px 0;
+			width: 90%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.info {
+				@include title-content(darkblue, black);
+			}
+
+			.prices-content {
+				ul {
+					display: flex;
+					justify-content: center;
+					padding-bottom: 40px;
+					flex-wrap: wrap;
+
+					li {
+						text-align: center;
+						margin: 20px;
+						border: 4px solid #96969680;
+						padding: 20px;
+
+						.benefits {
+							margin-bottom: 35px;
+
+							p {
+								margin: 15px 0;
+							}
+						}
+
+						.price-text {
+							margin: 20px 0;
+						}
+
+						a {
+							@include classic-btn();
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* TESTIMONIALS SECTION */
+	.testimonials-container {
+		background: darkslateblue;
+		padding-bottom: 40px;
+
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.title {
+				@include title-content(white, white);
+			}
+
+			.testimonial {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+				color: white;
+
+				.person-text {
+					width: 60%;
+					margin: 0 auto;
+				}
+
+				.name {
+					margin: 15px 0;
+				}
+
+				hr {
+					color: white;
+					width: 50%;
+					margin: 20px auto;
+				}
+
+				img {
+					width: 150px;
+					border-radius: 50%;
+					margin: 0 auto 20px auto;
+				}
+			}
+		}
+	}
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+	/* LANDING PAGE TEMPLATE STYLES */
+	.landing-page-template {
+		/* NAVBAR STYLES */
+		nav {
+			div {
+				flex-direction: column;
+
+				ul {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		/* HEADER SECTION */
+		header {
+			.content {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr;
+
+				a {
+					justify-self: center;
+				}
+			}
+		}
+
+		/* FEATURES SECTION */
+		.features-container {
+			.first-info,
+			.second-info {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	/* LANDING PAGE TEMPLATE STYLES */
+	.landing-page-template {
+		/* FEATURES SECTION */
+		.features-container {
+			.features-content {
+				flex-direction: column;
+
+				.first-info,
+				.second-info {
+					text-align: center;
+					display: flex;
+
+					div {
+						margin: 35px 0;
+
+						p {
+							width: 65%;
+							margin: 0 auto;
+						}
+
+						h3 {
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
