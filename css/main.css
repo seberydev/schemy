@@ -6,8 +6,13 @@
   font-family: "Balsamiq Sans", cursive;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   width: 100%;
+  font-size: 1.6rem;
 }
 
 button {
@@ -23,6 +28,7 @@ ul {
   list-style: none;
 }
 
+/* MAIN COLORS */
 /* MAIN CONTENT STYLES */
 .main-container {
   width: 100%;
@@ -30,41 +36,72 @@ ul {
   display: grid;
   grid-template-columns: 3fr 9fr;
   grid-template-rows: 1fr;
-  background: orange;
   /* HEADER */
   /* TEMPLATE ELEMENTS STYLES */
 }
 .main-container .elements-header h1 {
   font-family: "Pacifico", cursive;
   padding: 10px 0 0 20px;
+  color: #353333;
+  font-size: 3rem;
+}
+.main-container .elements-header .mobile-tools-container {
+  display: none;
 }
 .main-container .elements-container {
-  background: #f6bed6;
+  background: #eeeeee;
   display: grid;
-  grid-template-rows: 70px 9fr 3fr;
+  /*grid-template-rows: 70px 9fr 3fr;*/
+  grid-template-rows: 70px calc(100vh - 210px) 140px;
 }
 .main-container .elements-container .elements ul {
   width: 100%;
-  background: #e79cc2;
+  background: #d2415e;
+  overflow-y: auto;
+  max-height: calc(100vh - 210px);
 }
 .main-container .elements-container .elements ul li {
   padding: 0 0 0 20px;
   display: grid;
   grid-template-rows: 70px;
   grid-template-columns: 9fr 3fr;
+  color: #dfd5d5;
+}
+.main-container .elements-container .elements ul li button {
+  background: #e85e7a;
+  color: #eeeeee;
+  font-size: 2rem;
+  transition: 0.2s all ease-in;
+}
+.main-container .elements-container .elements ul li button:hover {
+  background: #d2415e;
+  font-size: 3rem;
 }
 .main-container .elements-container .elements ul li p {
   align-self: center;
 }
 .main-container .elements-container .about-container {
-  background: #336d88;
+  background: #eeeeee;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #353333;
+}
+.main-container .elements-container .about-container div {
+  margin-top: 10px;
+}
+.main-container .elements-container .about-container a {
+  color: #d2415e;
+  margin: 0 7px;
+  font-size: 3rem;
+  transition: 0.2s all ease-in;
+}
+.main-container .elements-container .about-container a:hover {
+  font-size: 3.5rem;
+  color: #e85e7a;
 }
 .main-container .template-container {
-  background: #1d1b38;
   max-height: 100vh;
   overflow-y: auto;
 }
@@ -79,20 +116,24 @@ ul {
   top: 30px;
   right: 100px;
 }
-.elements-container .template-selector-container option, .elements-container .template-selector-container select {
-  background: #e79cc2;
+.elements-container .template-selector-container option,
+.elements-container .template-selector-container select {
+  background: #eeeeee;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  box-shadow: 0 2px 2px 2px #3533334d;
+  color: #353333;
 }
 .elements-container .color-selector-container {
   position: absolute;
   bottom: 30px;
   right: 100px;
-  background: #336d88;
+  background: #eeeeee;
   padding: 15px;
   border-radius: 5px;
+  box-shadow: 0 2px 2px 2px #3533334d;
 }
 .elements-container .color-selector-container ul {
   display: flex;
@@ -112,19 +153,61 @@ ul {
   position: absolute;
   bottom: 0;
   right: 6px;
+  background: #3533334d;
+  color: #eeeeee;
+  padding: 3px 5px;
+  border-radius: 2px 2px 0 0;
 }
 .elements-container .color-selector-container ul li input {
   padding: 3px;
   border-radius: 5px;
   margin-top: 10px;
+  border: 1px solid rgba(53, 51, 51, 0.3);
+  color: #353333;
 }
 
 /* RESPONSIVE STYLES */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   /* MAIN CONTENT STYLES */
   .main-container {
-    grid-template-rows: 3fr 9fr;
+    grid-template-rows: 110px 9fr;
     grid-template-columns: 1fr;
+  }
+  .main-container .elements-header {
+    position: relative;
+  }
+  .main-container .elements-header .mobile-tools-container {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    display: block;
+    width: 100%;
+    background: #d2415e;
+    padding: 5px 0;
+  }
+  .main-container .elements-header .mobile-tools-container div {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container .elements-header .mobile-tools-container div button {
+    padding: 5px 8px;
+    margin: 0 10px;
+    flex: 1;
+    max-width: 100px;
+    border-radius: 10px;
+    color: #353333;
+    background: #eeeeee;
+    transition: 0.2s all ease-in;
+    font-size: 1.4rem;
+  }
+  .main-container .elements-header .mobile-tools-container div button:hover {
+    font-size: 1.3rem;
+    background: #dfd5d5;
+  }
+
+  .main-container .elements-container .about-container,
+.main-container .elements-container .elements {
+    display: none;
   }
 
   /* OTHER ELEMENTS STYLES */

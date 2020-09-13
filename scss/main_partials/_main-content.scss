@@ -1,3 +1,5 @@
+@use "main-colors";
+
 /* MAIN CONTENT STYLES */
 .main-container {
 	width: 100%;
@@ -5,32 +7,53 @@
 	display: grid;
 	grid-template-columns: 3fr 9fr;
 	grid-template-rows: 1fr;
-	background: orange;
 
 	/* HEADER */
 	.elements-header {
 		h1 {
-			font-family: 'Pacifico', cursive;
+			font-family: "Pacifico", cursive;
 			padding: 10px 0 0 20px;
+			color: main-colors.$black-text;
+			font-size: 3rem;
+		}
+
+		.mobile-tools-container {
+			display: none;
 		}
 	}
 
 	/* TEMPLATE ELEMENTS STYLES */
 	.elements-container {
-		background: #f6bed6;
+		background: main-colors.$alternative-color;
 		display: grid;
-		grid-template-rows: 70px 9fr 3fr;
+		/*grid-template-rows: 70px 9fr 3fr;*/
+		grid-template-rows: 70px calc(100vh - 210px) 140px;
 
 		.elements {
 			ul {
 				width: 100%;
-				background: #e79cc2;
+				background: main-colors.$secondary-color;
+				overflow-y: auto;
+				max-height: calc(100vh - 210px);
 
 				li {
 					padding: 0 0 0 20px;
 					display: grid;
 					grid-template-rows: 70px;
 					grid-template-columns: 9fr 3fr;
+					color: main-colors.$white-text;
+
+					button {
+						background: main-colors.$secondary-shadow-color;
+						color: main-colors.$alternative-color;
+						font-size: 2rem;
+						transition: 0.2s all ease-in;
+
+						&:hover {
+							background: main-colors.$secondary-color;
+							font-size: 3rem;
+						}
+					}
 
 					p {
 						align-self: center;
@@ -40,42 +63,55 @@
 		}
 
 		.about-container {
-			background: #336d88;
+			background: main-colors.$alternative-color;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-		}
+			color: main-colors.$black-text;
 
+			div {
+				margin-top: 10px;
+			}
+
+			a {
+				color: main-colors.$secondary-color;
+				margin: 0 7px;
+				font-size: 3rem;
+				transition: 0.2s all ease-in;
+
+				&:hover {
+					font-size: 3.5rem;
+					color: main-colors.$secondary-shadow-color;
+				}
+			}
+		}
 	}
 
 	.template-container {
-		background: #1d1b38;
 		max-height: 100vh;
 		overflow-y: auto;
 	}
-
-	
 }
-
 
 /* OTHER ELEMENTS STYLES */
 .elements-container {
-
 	/* TEMPLATE SELECTOR STYLES */
 	.template-selector-container {
 		position: absolute;
 		top: 30px;
 		right: 100px;
 
-		option, select {
-			background: #e79cc2;
+		option,
+		select {
+			background: main-colors.$alternative-color;
 			padding: 5px 10px;
 			border-radius: 5px;
 			cursor: pointer;
 			border: none;
+			box-shadow: 0 2px 2px 2px main-colors.$black-light;
+			color: main-colors.$black-text;
 		}
-
 	}
 
 	/* COLOR SELECTOR STYLES */
@@ -83,9 +119,10 @@
 		position: absolute;
 		bottom: 30px;
 		right: 100px;
-		background: #336d88;
+		background: main-colors.$alternative-color;
 		padding: 15px;
 		border-radius: 5px;
+		box-shadow: 0 2px 2px 2px main-colors.$black-light;
 
 		ul {
 			display: flex;
@@ -105,6 +142,10 @@
 						position: absolute;
 						bottom: 0;
 						right: 6px;
+						background: main-colors.$black-light;
+						color: main-colors.$alternative-color;
+						padding: 3px 5px;
+						border-radius: 2px 2px 0 0;
 					}
 				}
 
@@ -112,27 +153,69 @@
 					padding: 3px;
 					border-radius: 5px;
 					margin-top: 10px;
+					border: 1px solid rgba(53, 51, 51, 0.3);
+					color: main-colors.$black-text;
 				}
 			}
 		}
 	}
 }
 
-
-
 /* RESPONSIVE STYLES */
 
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 1200px) {
 	/* MAIN CONTENT STYLES */
 	.main-container {
-		grid-template-rows: 3fr 9fr;
+		grid-template-rows: 110px 9fr;
 		grid-template-columns: 1fr;
+
+		.elements-header {
+			position: relative;
+			.mobile-tools-container {
+				position: absolute;
+				bottom: -40px;
+				left: 0;
+				display: block;
+				width: 100%;
+				background: main-colors.$secondary-color;
+				padding: 5px 0;
+
+				div {
+					display: flex;
+					justify-content: center;
+
+					button {
+						padding: 5px 8px;
+						margin: 0 10px;
+						flex: 1;
+						max-width: 100px;
+						border-radius: 10px;
+						color: main-colors.$black-text;
+						background: main-colors.$alternative-color;
+						transition: 0.2s all ease-in;
+						font-size: 1.4rem;
+
+						&:hover {
+							font-size: 1.3rem;
+							background: main-colors.$white-text;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.main-container {
+		.elements-container {
+			.about-container,
+			.elements {
+				display: none;
+			}
+		}
 	}
 
 	/* OTHER ELEMENTS STYLES */
 	.elements-container {
-
 		/* TEMPLATE SELECTOR STYLES */
 		.template-selector-container {
 			right: 10px;
@@ -163,9 +246,4 @@
 			}
 		}
 	}
-	
 }
-
-
-
-
