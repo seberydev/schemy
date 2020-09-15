@@ -1,26 +1,45 @@
 @use "config-blog";
 
+/* MAIN VARIABLES */
+$main-color: #fbe2e5; /* WHITE */
+$secondary-color: #adb1af4d;
+$secondary-shadow-color: #767c77; /* PINK */
+$black-text: #3a3b3b;
+
 /* BLOG TEMPLATE STYLES */
 .blog-template {
-	background: white;
+	background: $main-color;
 	padding-bottom: 50px;
+
+	* {
+		font-family: "Arvo", serif;
+		color: $black-text;
+	}
+
+	img {
+		border-radius: 5px;
+	}
 
 	/* NAVBAR */
 	nav {
 		width: 100%;
-		background: white;
+		background: $main-color;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 15px 0;
 
+		h1 {
+			font-size: 3rem;
+		}
+
 		&::after {
 			content: "";
 			position: relative;
 			width: 50%;
 			height: 3px;
-			background: pink;
+			background: $secondary-shadow-color;
 			bottom: 0;
 			margin-top: 10px;
 			border-radius: 3px;
@@ -35,6 +54,11 @@
 
 				a {
 					color: black;
+					transition: 0.2s all ease-in;
+
+					&:hover {
+						font-size: 1.7rem;
+					}
 				}
 			}
 		}
@@ -44,35 +68,46 @@
 	.latest-blogs-container {
 		width: 90%;
 		margin: 0 auto;
-		background: #fbe2e5;
+		background: $secondary-color;
 		padding: 20px;
+
+		h2 {
+			font-size: 2.4rem;
+		}
 
 		.card-blog-item {
 			display: flex;
 			margin: 10px 0;
 			padding: 15px 0 15px 15px;
 			position: relative;
-			background: white;
+			background: $main-color;
 			width: 60%;
+			border-radius: 5px;
+
+			&:hover {
+				box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+			}
 
 			&::before {
 				content: "";
-				background: pink;
+				background: $secondary-shadow-color;
 				width: 10px;
 				height: 80px;
 				position: absolute;
 				top: 0;
 				left: 0;
+				border-radius: 5px 0 0 0;
 			}
 
 			&::after {
 				content: "";
-				background: pink;
+				background: $secondary-shadow-color;
 				width: 80px;
 				height: 10px;
 				position: absolute;
 				top: 0;
 				left: 0;
+				border-radius: 5px 0 0 0;
 			}
 
 			.card-info {
@@ -83,10 +118,12 @@
 
 				h3 {
 					width: 60%;
+					font-size: 1.8rem;
 				}
 
 				.card-user-info {
 					@include config-blog.user-info;
+					font-size: 1.4rem;
 				}
 			}
 		}
@@ -110,7 +147,7 @@
 
 		.blog-user-info {
 			@include config-blog.user-info;
-			background: #fbe2e5;
+			background: $secondary-color;
 			padding: 8px;
 			border-radius: 6px;
 			text-align: left;
@@ -120,6 +157,7 @@
 			p {
 				margin: 20px 0;
 				width: 90%;
+				line-height: 2.3rem;
 			}
 		}
 	}

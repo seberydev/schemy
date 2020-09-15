@@ -10,32 +10,42 @@ a {
 }
 
 /* MIXINS */
-/*
-	TEMPLATE EXAMPLE URL: https://www.uplabs.com/posts/mobile-blog-app-design
-*/
+/* MAIN VARIABLES */
+/* WHITE */
+/* PINK */
 /* BLOG TEMPLATE STYLES */
 .blog-template {
-  background: white;
+  background: #fbe2e5;
   padding-bottom: 50px;
   /* NAVBAR */
   /* LATEST BLOGS STYLES */
   /* CURRENT BLOG STYLES */
 }
+.blog-template * {
+  font-family: "Arvo", serif;
+  color: #3a3b3b;
+}
+.blog-template img {
+  border-radius: 5px;
+}
 .blog-template nav {
   width: 100%;
-  background: white;
+  background: #fbe2e5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px 0;
 }
+.blog-template nav h1 {
+  font-size: 3rem;
+}
 .blog-template nav::after {
   content: "";
   position: relative;
   width: 50%;
   height: 3px;
-  background: pink;
+  background: #767c77;
   bottom: 0;
   margin-top: 10px;
   border-radius: 3px;
@@ -49,38 +59,51 @@ a {
 }
 .blog-template nav ul li a {
   color: black;
+  transition: 0.2s all ease-in;
+}
+.blog-template nav ul li a:hover {
+  font-size: 1.7rem;
 }
 .blog-template .latest-blogs-container {
   width: 90%;
   margin: 0 auto;
-  background: #fbe2e5;
+  background: #adb1af4d;
   padding: 20px;
+}
+.blog-template .latest-blogs-container h2 {
+  font-size: 2.4rem;
 }
 .blog-template .latest-blogs-container .card-blog-item {
   display: flex;
   margin: 10px 0;
   padding: 15px 0 15px 15px;
   position: relative;
-  background: white;
+  background: #fbe2e5;
   width: 60%;
+  border-radius: 5px;
+}
+.blog-template .latest-blogs-container .card-blog-item:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 .blog-template .latest-blogs-container .card-blog-item::before {
   content: "";
-  background: pink;
+  background: #767c77;
   width: 10px;
   height: 80px;
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 5px 0 0 0;
 }
 .blog-template .latest-blogs-container .card-blog-item::after {
   content: "";
-  background: pink;
+  background: #767c77;
   width: 80px;
   height: 10px;
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 5px 0 0 0;
 }
 .blog-template .latest-blogs-container .card-blog-item .card-info {
   display: flex;
@@ -90,10 +113,12 @@ a {
 }
 .blog-template .latest-blogs-container .card-blog-item .card-info h3 {
   width: 60%;
+  font-size: 1.8rem;
 }
 .blog-template .latest-blogs-container .card-blog-item .card-info .card-user-info {
   display: flex;
   align-items: center;
+  font-size: 1.4rem;
 }
 .blog-template .latest-blogs-container .card-blog-item .card-info .card-user-info div {
   display: flex;
@@ -120,7 +145,7 @@ a {
 .blog-template .current-blog-container .blog-user-info {
   display: flex;
   align-items: center;
-  background: #fbe2e5;
+  background: #adb1af4d;
   padding: 8px;
   border-radius: 6px;
   text-align: left;
@@ -137,6 +162,7 @@ a {
 .blog-template .current-blog-container .blog-text-container p {
   margin: 20px 0;
   width: 90%;
+  line-height: 2.3rem;
 }
 
 /* RESPONSIVE STYLES */
@@ -189,5 +215,25 @@ a {
     width: 80%;
   }
 }
+/*
+
+    INSPIRATION DESIGN
+	https://www.uplabs.com/posts/mobile-blog-app-design
+
+*/
+/*
+
+    MAIN DOM ELEMENTS
+    1-background-color
+    2-decoration-color
+    3-latest-blogs-background
+    4-latest-blogs-color
+    5-blog-card-background
+    6-blog-card-color
+    7-main-blog-text-color
+    8-main-blog-info-background
+    9-main-blog-info-color
+
+*/
 
 /*# sourceMappingURL=main-blog.css.map */
