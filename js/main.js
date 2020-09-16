@@ -106,6 +106,13 @@ const UIController = (() => {
 		elementsContainer: "elementsList",
 		colorsE: ".buttonSelector",
 		colorInputsE: ".colorInput",
+		mobileElementsBtn: "mobileElementsBtn",
+		mobileElementsUI: ".mobile-elements",
+		closeElementsBtn: "close-elements",
+		mobileAboutBtn: "mobileAboutBtn",
+		mobileAboutUI: ".mobile-about",
+		closeAboutBtn: "closeAbout",
+		mobileElementsList: "mobileElementsList",
 	};
 
 	return {
@@ -121,10 +128,15 @@ const UIController = (() => {
 			const container = document.getElementById(DOMStrings.elementsContainer);
 			container.innerHTML = "";
 
+			const mobileContainer = document.getElementById(
+				DOMStrings.mobileElementsList
+			);
+
 			dataArr.forEach((e) => {
 				const li = document.createElement("li");
 				li.innerHTML = `<p>${e.name}</p> <button type="button">1</button>`;
 				container.appendChild(li);
+				mobileContainer.appendChild(li.cloneNode(true));
 			});
 		},
 		changeColors: (dataArr) => {
@@ -170,6 +182,28 @@ const controller = ((UI, DATA) => {
 					UI.changeColors(allData.currentColors);
 				}
 			});
+		});
+
+		document
+			.getElementById(DOM.mobileElementsBtn)
+			.addEventListener("click", () => {
+				document.querySelector(DOM.mobileElementsUI).style.display = "block";
+			});
+
+		document
+			.getElementById(DOM.closeElementsBtn)
+			.addEventListener("click", () => {
+				document.querySelector(DOM.mobileElementsUI).style.display = "none";
+			});
+
+		document
+			.getElementById(DOM.mobileAboutBtn)
+			.addEventListener("click", () => {
+				document.querySelector(DOM.mobileAboutUI).style.display = "block";
+			});
+
+		document.getElementById(DOM.closeAboutBtn).addEventListener("click", () => {
+			document.querySelector(DOM.mobileAboutUI).style.display = "none";
 		});
 	};
 

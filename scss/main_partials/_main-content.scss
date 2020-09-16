@@ -1,5 +1,58 @@
 @use "main-colors";
 
+/* MIXINS */
+@mixin element-li {
+	padding: 0 0 0 20px;
+	display: grid;
+	grid-template-rows: 70px;
+	grid-template-columns: 9fr 3fr;
+	color: main-colors.$white-text;
+
+	button {
+		background: main-colors.$secondary-shadow-color;
+		color: main-colors.$alternative-color;
+		font-size: 2rem;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			background: main-colors.$secondary-color;
+			font-size: 3rem;
+		}
+	}
+
+	p {
+		align-self: center;
+	}
+}
+
+@mixin fade-ui {
+	background: main-colors.$black-light;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 10;
+}
+
+@mixin inside-ui {
+	max-width: 400px;
+	width: 70%;
+	height: 70vh;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+@mixin close-btn {
+	padding: 8px 13px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	font-size: 1.8rem;
+	transition: 0.2s all ease-in;
+}
+
 /* MAIN CONTENT STYLES */
 .main-container {
 	width: 100%;
@@ -22,6 +75,86 @@
 		}
 	}
 
+	/* MOBILE ABOUT SECTION */
+	.mobile-about {
+		display: none;
+		@include fade-ui;
+
+		.content {
+			@include inside-ui();
+			background: main-colors.$alternative-color;
+			text-align: right;
+
+			#closeAbout {
+				background: main-colors.$black-text;
+				color: main-colors.$alternative-color;
+				@include close-btn;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+
+				&:hover {
+					transform: scale(1.1);
+					background: main-colors.$black-light;
+				}
+			}
+
+			div {
+				text-align: center;
+				font-size: 2.3rem;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: main-colors.$black-text;
+
+				div {
+					margin: 20px 0 0 0;
+
+					a {
+						color: main-colors.$secondary-color;
+						margin: 0 7px;
+						transition: 0.2s all ease-in;
+
+						&:hover {
+							font-size: 2.6rem;
+							color: main-colors.$secondary-shadow-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* MOBILE TEMPLATE ELEMENTS */
+	.mobile-elements {
+		display: none;
+		@include fade-ui;
+		text-align: right;
+
+		#close-elements {
+			background: main-colors.$alternative-color;
+			color: main-colors.$black-text;
+			@include close-btn;
+
+			&:hover {
+				background: main-colors.$white-text;
+				transform: scale(1.1);
+			}
+		}
+
+		ul {
+			@include inside-ui;
+			background: main-colors.$secondary-color;
+			overflow-y: auto;
+
+			li {
+				@include element-li;
+				text-align: left;
+			}
+		}
+	}
+
 	/* TEMPLATE ELEMENTS STYLES */
 	.elements-container {
 		background: main-colors.$alternative-color;
@@ -37,27 +170,7 @@
 				max-height: calc(100vh - 210px);
 
 				li {
-					padding: 0 0 0 20px;
-					display: grid;
-					grid-template-rows: 70px;
-					grid-template-columns: 9fr 3fr;
-					color: main-colors.$white-text;
-
-					button {
-						background: main-colors.$secondary-shadow-color;
-						color: main-colors.$alternative-color;
-						font-size: 2rem;
-						transition: 0.2s all ease-in;
-
-						&:hover {
-							background: main-colors.$secondary-color;
-							font-size: 3rem;
-						}
-					}
-
-					p {
-						align-self: center;
-					}
+					@include element-li;
 				}
 			}
 		}

@@ -1,10 +1,15 @@
 /* MIXINS */
 @mixin classic-btn {
-	background: darkslateblue;
+	background: $secondary-color;
 	padding: 10px 15px;
 	border-radius: 5px;
 	color: white;
 	box-shadow: 0px 2px 2px black;
+	transition: 0.2s all ease-in;
+
+	&:hover {
+		background: $black-text;
+	}
 }
 
 @mixin title-content($hr-color, $text-color) {
@@ -25,12 +30,18 @@
 	}
 }
 
+/* COLORS */
+$main-color: #e8e8e8;
+$secondary-color: #5c5c5c;
+$secondary-shadow-color: #a37eba;
+$black-text: #2e2e2e;
+
 /* LANDING PAGE TEMPLATE STYLES */
 .landing-page-template {
 	/* NAVBAR STYLES */
 	nav {
 		width: 100%;
-		background: darkblue;
+		background: $secondary-color;
 		padding: 18px 0;
 
 		div {
@@ -52,6 +63,11 @@
 
 					a {
 						color: white;
+						transition: 0.2s all ease-in;
+
+						&:hover {
+							font-size: 1.8rem;
+						}
 					}
 				}
 			}
@@ -60,7 +76,7 @@
 
 	/* HEADER SECTION */
 	header {
-		background: darkslateblue;
+		background: $secondary-shadow-color;
 		width: 100%;
 
 		.content {
@@ -96,7 +112,8 @@
 
 	/* FEATURES SECTION */
 	.features-container {
-		background: white;
+		background: $main-color;
+		color: $black-text;
 
 		.content {
 			width: 90%;
@@ -105,7 +122,7 @@
 			flex-direction: column;
 
 			.features-info {
-				@include title-content(darkblue, black);
+				@include title-content($secondary-color, $black-text);
 			}
 
 			.features-content {
@@ -133,7 +150,7 @@
 
 	/* INNOVATIONS SECTION */
 	.innovation-container {
-		background: darkslateblue;
+		background: $secondary-shadow-color;
 
 		.content {
 			padding: 40px 0;
@@ -145,7 +162,7 @@
 			align-items: center;
 
 			.info {
-				@include title-content(white, white);
+				@include title-content($main-color, white);
 			}
 
 			img {
@@ -161,7 +178,8 @@
 
 	/* PRICES SECTION */
 	.prices-container {
-		background: white;
+		background: $main-color;
+		color: $black-text;
 
 		.content {
 			padding: 20px 0;
@@ -172,7 +190,7 @@
 			justify-content: center;
 
 			.info {
-				@include title-content(darkblue, black);
+				@include title-content($secondary-color, $black-text);
 			}
 
 			.prices-content {
@@ -211,7 +229,7 @@
 
 	/* TESTIMONIALS SECTION */
 	.testimonials-container {
-		background: darkslateblue;
+		background: $secondary-shadow-color;
 		padding-bottom: 40px;
 
 		.content {
@@ -222,7 +240,7 @@
 			justify-content: center;
 
 			.title {
-				@include title-content(white, white);
+				@include title-content($main-color, white);
 			}
 
 			.testimonial {
@@ -268,6 +286,17 @@
 
 				ul {
 					margin-top: 20px;
+					flex-wrap: wrap;
+					justify-content: center;
+					flex-direction: column;
+
+					li {
+						padding: 10px;
+						background: $black-text;
+						border-radius: 5px;
+						text-align: center;
+						margin: 5px;
+					}
 				}
 			}
 		}

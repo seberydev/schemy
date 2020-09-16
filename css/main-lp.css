@@ -1,4 +1,5 @@
 /* MIXINS */
+/* COLORS */
 /* LANDING PAGE TEMPLATE STYLES */
 .landing-page-template {
   /* NAVBAR STYLES */
@@ -10,7 +11,7 @@
 }
 .landing-page-template nav {
   width: 100%;
-  background: darkblue;
+  background: #5c5c5c;
   padding: 18px 0;
 }
 .landing-page-template nav div {
@@ -31,9 +32,13 @@
 }
 .landing-page-template nav div ul li a {
   color: white;
+  transition: 0.2s all ease-in;
+}
+.landing-page-template nav div ul li a:hover {
+  font-size: 1.8rem;
 }
 .landing-page-template header {
-  background: darkslateblue;
+  background: #a37eba;
   width: 100%;
 }
 .landing-page-template header .content {
@@ -58,15 +63,20 @@
   margin: 20px 0;
 }
 .landing-page-template header .header-info a {
-  background: darkslateblue;
+  background: #5c5c5c;
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
   box-shadow: 0px 2px 2px black;
+  transition: 0.2s all ease-in;
   align-self: flex-start;
 }
+.landing-page-template header .header-info a:hover {
+  background: #2e2e2e;
+}
 .landing-page-template .features-container {
-  background: white;
+  background: #e8e8e8;
+  color: #2e2e2e;
 }
 .landing-page-template .features-container .content {
   width: 90%;
@@ -78,10 +88,10 @@
   text-align: center;
   padding: 20px 0;
   margin: 20px 0;
-  color: black;
+  color: #2e2e2e;
 }
 .landing-page-template .features-container .content .features-info hr {
-  color: darkblue;
+  color: #5c5c5c;
   width: 35%;
   margin: 20px auto;
 }
@@ -106,7 +116,7 @@
   padding: 0 20px;
 }
 .landing-page-template .innovation-container {
-  background: darkslateblue;
+  background: #a37eba;
 }
 .landing-page-template .innovation-container .content {
   padding: 40px 0;
@@ -124,7 +134,7 @@
   color: white;
 }
 .landing-page-template .innovation-container .content .info hr {
-  color: white;
+  color: #e8e8e8;
   width: 35%;
   margin: 20px auto;
 }
@@ -136,15 +146,20 @@
   margin: 20px 0;
 }
 .landing-page-template .innovation-container .content a {
-  background: darkslateblue;
+  background: #5c5c5c;
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
   box-shadow: 0px 2px 2px black;
+  transition: 0.2s all ease-in;
   margin-bottom: 20px;
 }
+.landing-page-template .innovation-container .content a:hover {
+  background: #2e2e2e;
+}
 .landing-page-template .prices-container {
-  background: white;
+  background: #e8e8e8;
+  color: #2e2e2e;
 }
 .landing-page-template .prices-container .content {
   padding: 20px 0;
@@ -158,10 +173,10 @@
   text-align: center;
   padding: 20px 0;
   margin: 20px 0;
-  color: black;
+  color: #2e2e2e;
 }
 .landing-page-template .prices-container .content .info hr {
-  color: darkblue;
+  color: #5c5c5c;
   width: 35%;
   margin: 20px auto;
 }
@@ -191,14 +206,18 @@
   margin: 20px 0;
 }
 .landing-page-template .prices-container .content .prices-content ul li a {
-  background: darkslateblue;
+  background: #5c5c5c;
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
   box-shadow: 0px 2px 2px black;
+  transition: 0.2s all ease-in;
+}
+.landing-page-template .prices-container .content .prices-content ul li a:hover {
+  background: #2e2e2e;
 }
 .landing-page-template .testimonials-container {
-  background: darkslateblue;
+  background: #a37eba;
   padding-bottom: 40px;
 }
 .landing-page-template .testimonials-container .content {
@@ -215,7 +234,7 @@
   color: white;
 }
 .landing-page-template .testimonials-container .content .title hr {
-  color: white;
+  color: #e8e8e8;
   width: 35%;
   margin: 20px auto;
 }
@@ -261,6 +280,16 @@
   }
   .landing-page-template nav div ul {
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .landing-page-template nav div ul li {
+    padding: 10px;
+    background: #2e2e2e;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
   }
   .landing-page-template header .content {
     grid-template-columns: 1fr;
@@ -301,5 +330,29 @@
     margin-bottom: 20px;
   }
 }
+/* 
+
+    INSPIRATION DESIGN 
+    https://www.uplabs.com/posts/carabobo-material-design-landing-page
+
+*/
+/* 
+
+    MAIN DOM ELEMENTS
+    1-navbar-background
+    2-navbar-color
+    3-header-background
+    4-header-color
+    5-features-background
+    6-features-color
+    7-innovations-background
+    8-innovations-color
+    9-prices-background
+    10-prices-color
+    11-testimonials-background
+    12-testimonials-color
+    13-alternative-color
+
+*/
 
 /*# sourceMappingURL=main-lp.css.map */
