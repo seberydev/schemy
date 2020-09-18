@@ -3,35 +3,43 @@ const dataController = (() => {
 	const templates = {
 		blog: {
 			htmlText:
-				'<div class="blog-template"><!-- NAVBAR --><nav><h1>My Blog</h1><ul><li><a href="#">Home</a></li><li><a href="#">Categories</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav><!-- LATEST BLOGS CONTAINER --><section class="latest-blogs-container"><h2>Latest Blogs</h2><ul><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 4 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 7 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 3 min read</p></div></div></li></ul></section><!-- CURRENT BLOG CONTAINER --><section class="current-blog-container"><img class="main-blog-image"src="https://via.placeholder.com/640x480"alt="Main Blog Image"/><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.</h2><div class="blog-user-info"><div><img src="https://via.placeholder.com/25" alt="User Image" /><p>User Name</p></div><p>&#9787; 3 min read</p></div><div class="blog-text-container"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation. Lorem ipsum dolor sit amet,consectetur adipisicing elit, tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></div></section></div>',
+				'<div class="blog-template" id="background-color"><!-- NAVBAR --><nav><h1>My Blog</h1><ul><li><a href="#">Home</a></li><li><a href="#">Categories</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav><!-- LATEST BLOGS CONTAINER --><section class="latest-blogs-container"><h2>Latest Blogs</h2><ul><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 4 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 7 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 3 min read</p></div></div></li></ul></section><!-- CURRENT BLOG CONTAINER --><section class="current-blog-container"><img class="main-blog-image"src="https://via.placeholder.com/640x480"alt="Main Blog Image"/><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.</h2><div class="blog-user-info"><div><img src="https://via.placeholder.com/25" alt="User Image" /><p>User Name</p></div><p>&#9787; 3 min read</p></div><div class="blog-text-container"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation. Lorem ipsum dolor sit amet,consectetur adipisicing elit, tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></div></section></div>',
 			domElements: [
 				{
 					name: "background-color",
-					index: 0,
+					index: 1,
 				},
 				{
 					name: "decoration-color",
+					index: 2,
 				},
 				{
 					name: "latest-blogs-background",
+					index: 3,
 				},
 				{
 					name: "latest-blogs-color",
+					index: 4,
 				},
 				{
 					name: "blog-card-background",
+					index: 5,
 				},
 				{
 					name: "blog-card-color",
+					index: 1,
 				},
 				{
 					name: "main-blog-text-color",
+					index: 2,
 				},
 				{
 					name: "main-blog-info-background",
+					index: 3,
 				},
 				{
 					name: "main-blog-info-color",
+					index: 4,
 				},
 			],
 		},
@@ -41,43 +49,55 @@ const dataController = (() => {
 			domElements: [
 				{
 					name: "navbar-background",
-					index: 0,
+					index: 1,
 				},
 				{
 					name: "navbar-color",
+					index: 2,
 				},
 				{
 					name: "header-background",
+					index: 3,
 				},
 				{
 					name: "header-color",
+					index: 4,
 				},
 				{
 					name: "features-background",
+					index: 5,
 				},
 				{
 					name: "features-color",
+					index: 1,
 				},
 				{
 					name: "innovations-background",
+					index: 2,
 				},
 				{
 					name: "innovations-color",
+					index: 3,
 				},
 				{
 					name: "prices-background",
+					index: 4,
 				},
 				{
 					name: "prices-color",
+					index: 5,
 				},
 				{
 					name: "testimonials-background",
+					index: 1,
 				},
 				{
 					name: "testimonials-color",
+					index: 2,
 				},
 				{
 					name: "alternative-color",
+					index: 3,
 				},
 			],
 		},
@@ -94,6 +114,11 @@ const dataController = (() => {
 		},
 		getTemplates: () => {
 			return templates;
+		},
+		setIndexData: (name, newIndex) => {
+			templates[data.currentTemplate].domElements.forEach((e) => {
+				e.name === name ? (e.index = newIndex) : 0;
+			});
 		},
 	};
 })();
@@ -113,6 +138,11 @@ const UIController = (() => {
 		mobileAboutUI: ".mobile-about",
 		closeAboutBtn: "closeAbout",
 		mobileElementsList: "mobileElementsList",
+		allElementsList: ".allElement",
+	};
+
+	const changeColors = (index, colorsArr, element) => {
+		element.style.background = colorsArr[index - 1];
 	};
 
 	return {
@@ -131,12 +161,22 @@ const UIController = (() => {
 			const mobileContainer = document.getElementById(
 				DOMStrings.mobileElementsList
 			);
+			mobileContainer.innerHTML = "";
+			const crossBtn = document.createElement("button");
+			crossBtn.innerHTML = "&#10006;";
+			crossBtn.id = "close-elements";
 
 			dataArr.forEach((e) => {
 				const li = document.createElement("li");
-				li.innerHTML = `<p>${e.name}</p> <button type="button">1</button>`;
+				li.innerHTML = `<p>${e.name}</p> <button onclick="UIController.changeIndexUI(this, dataController.setIndexData, dataController.getData().currentColors)" class="allElement" type="button">1</button>`;
 				container.appendChild(li);
 				mobileContainer.appendChild(li.cloneNode(true));
+			});
+
+			mobileContainer.insertAdjacentElement("afterbegin", crossBtn);
+			crossBtn.addEventListener("click", () => {
+				document.querySelector(DOMStrings.mobileElementsUI).style.display =
+					"none";
 			});
 		},
 		changeColors: (dataArr) => {
@@ -153,6 +193,30 @@ const UIController = (() => {
 		},
 		validHex: (text) => {
 			return /^#[0-9A-F]{6}$/i.test(text);
+		},
+		setIndexE: (arr) => {
+			const all = Array.from(
+				document.querySelectorAll(DOMStrings.allElementsList)
+			);
+
+			const allSize = all.length / 2;
+
+			all.forEach((e, i) => {
+				i < allSize
+					? (e.textContent = arr[i].index)
+					: (e.textContent = arr[i - allSize].index);
+			});
+		},
+		changeIndexUI: (e, setIndex, colors) => {
+			let currentIndex = parseInt(e.innerHTML);
+			const limit = 5;
+			const elementName = e.parentNode.firstChild.innerHTML;
+			currentIndex = currentIndex === limit ? 1 : ++currentIndex;
+			e.innerHTML = currentIndex.toString();
+			setIndex(elementName, currentIndex);
+			const element = document.getElementById(elementName);
+
+			changeColors(currentIndex, colors, element);
 		},
 	};
 })();
@@ -171,6 +235,7 @@ const controller = ((UI, DATA) => {
 				allData.currentTemplate = e.target.value;
 				UI.changeTemplate(allData.currentTemplate, temp);
 				UI.addDOMElements(temp[allData.currentTemplate].domElements);
+				UI.setIndexE(temp[allData.currentTemplate].domElements);
 			});
 
 		const colInputs = UI.getColorInputs();
@@ -216,6 +281,7 @@ const controller = ((UI, DATA) => {
 			UI.addDOMElements(temp[allData.currentTemplate].domElements);
 			addEvents();
 			UI.changeColors(allData.currentColors);
+			UI.setIndexE(temp[allData.currentTemplate].domElements);
 		},
 	};
 })(UIController, dataController);
