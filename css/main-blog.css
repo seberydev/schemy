@@ -36,19 +36,20 @@ a {
   justify-content: center;
   align-items: center;
   padding: 15px 0;
+  /*
+  &::after {
+  	content: "";
+  	position: relative;
+  	width: 50%;
+  	height: 3px;
+  	background: $secondary-shadow-color;
+  	bottom: 0;
+  	margin-top: 10px;
+  	border-radius: 3px;
+  }*/
 }
 .blog-template nav h1 {
   font-size: 3rem;
-}
-.blog-template nav::after {
-  content: "";
-  position: relative;
-  width: 50%;
-  height: 3px;
-  background: #767c77;
-  bottom: 0;
-  margin-top: 10px;
-  border-radius: 3px;
 }
 .blog-template nav ul {
   display: flex;
