@@ -3,12 +3,17 @@ const dataController = (() => {
 	const templates = {
 		blog: {
 			htmlText:
-				'<div class="blog-template background-color"><!-- NAVBAR --><nav class="background-color decoration-color"><h1>My Blog</h1><ul><li><a href="#">Home</a></li><li><a href="#">Categories</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav><!-- LATEST BLOGS CONTAINER --><section class="latest-blogs-container"><h2>Latest Blogs</h2><ul><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 4 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 7 min read</p></div></div></li><li class="card-blog-item"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p>User Name</p></div><p>&#9787; 3 min read</p></div></div></li></ul></section><!-- CURRENT BLOG CONTAINER --><section class="current-blog-container"><img class="main-blog-image"src="https://via.placeholder.com/640x480"alt="Main Blog Image"/><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.</h2><div class="blog-user-info"><div><img src="https://via.placeholder.com/25" alt="User Image" /><p>User Name</p></div><p>&#9787; 3 min read</p></div><div class="blog-text-container"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation. Lorem ipsum dolor sit amet,consectetur adipisicing elit, tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></div></section></div>',
+				'<div class="blog-template background-color"><!-- NAVBAR --><nav class="background-color decoration-color"><h1 class="nav-color">My Blog</h1><ul><li><a class="nav-color" href="#">Home</a></li><li><a class="nav-color" href="#">Categories</a></li><li><a class="nav-color" href="#">About</a></li><li><a class="nav-color" href="#">Contact</a></li></ul></nav><!-- LATEST BLOGS CONTAINER --><section class="latest-blogs-background latest-blogs-container"><h2 class="latest-blogs-color">Latest Blogs</h2><ul><li class="blog-card-background card-blog-item decoration-color"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3 class="blog-card-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p class="blog-card-color">User Name</p></div><p class="blog-card-color">&#9787; 4 min read</p></div></div></li><li class="blog-card-background card-blog-item decoration-color"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3 class="blog-card-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p class="blog-card-color">User Name</p></div><p class="blog-card-color">&#9787; 7 min read</p></div></div></li><li class="blog-card-background card-blog-item decoration-color"><img src="https://via.placeholder.com/150" alt="Blog Image" /><div class="card-info"><h3 class="blog-card-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3><div class="card-user-info"><div><img src="https://via.placeholder.com/25"alt="User Image"/><p class="blog-card-color">User Name</p></div><p class="blog-card-color">&#9787; 3 min read</p></div></div></li></ul></section><!-- CURRENT BLOG CONTAINER --><section class="current-blog-container"><img class="main-blog-image"src="https://via.placeholder.com/640x480"alt="Main Blog Image"/><h2 class="main-blog-text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.</h2><div class="blog-user-info main-blog-info-background"><div><img src="https://via.placeholder.com/25" alt="User Image" /><p class="main-blog-info-color">User Name</p></div><p class="main-blog-info-color">&#9787; 3 min read</p></div><div class="blog-text-container"><p class="main-blog-text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation.</p><p class="main-blog-text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation.</p><p class="main-blog-text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p><p class="main-blog-text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation. Lorem ipsum dolor sit amet,consectetur adipisicing elit, tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></div></section></div>',
 			domElements: [
 				{
 					name: "background-color",
 					index: 1,
 					type: "bg",
+				},
+				{
+					name: "nav-color",
+					index: 5,
+					type: "color",
 				},
 				{
 					name: "decoration-color",
@@ -24,6 +29,7 @@ const dataController = (() => {
 								bottom: "0",
 								"margin-top": "10px",
 								"border-radius": "3px",
+								selector: ".blog-template nav::after",
 							},
 						],
 						[
@@ -34,7 +40,9 @@ const dataController = (() => {
 								position: "absolute",
 								top: "0",
 								left: "0",
-								"border-radius": "5px 0 0 0",
+								"border-radius": "5px 0 5px 0",
+								selector:
+									".blog-template .latest-blogs-container ul .decoration-color::after",
 							},
 							{
 								content: "",
@@ -43,7 +51,9 @@ const dataController = (() => {
 								position: "absolute",
 								top: "0",
 								left: "0",
-								"border-radius": "5px 0 0 0",
+								"border-radius": "5px 0 5px 0",
+								selector:
+									".blog-template .latest-blogs-container ul .decoration-color::before",
 							},
 						],
 					],
@@ -51,30 +61,37 @@ const dataController = (() => {
 				{
 					name: "latest-blogs-background",
 					index: 3,
+					type: "bg",
 				},
 				{
 					name: "latest-blogs-color",
 					index: 4,
+					type: "color",
 				},
 				{
 					name: "blog-card-background",
 					index: 5,
+					type: "bg",
 				},
 				{
 					name: "blog-card-color",
 					index: 1,
+					type: "color",
 				},
 				{
 					name: "main-blog-text-color",
 					index: 2,
+					type: "color",
 				},
 				{
 					name: "main-blog-info-background",
 					index: 3,
+					type: "bg",
 				},
 				{
 					name: "main-blog-info-color",
 					index: 4,
+					type: "color",
 				},
 			],
 		},
@@ -183,13 +200,56 @@ const UIController = (() => {
 	};
 
 	const changeColors = (index, colorsArr, elements, info) => {
-		elements.forEach((e) => {
+		let stylesText = "";
+
+		elements.forEach((e, i) => {
 			switch (info.type) {
 				case "bg":
 					e.style.background = colorsArr[index - 1];
 					break;
+				case "color":
+					e.style.color = colorsArr[index - 1];
+					break;
 				case "pseudoelement":
-					e.setAttribute("style", "nav::after {}");
+					let obj;
+					let obj2;
+
+					if (i === 0) {
+						allChilds = document.querySelectorAll("style");
+						if (allChilds.length > 0) {
+							let body = document.querySelector("body");
+							body.removeChild(body.childNodes[body.childNodes.length - 1]);
+						}
+
+						obj = info.styles[0][0];
+						stylesText = ` ${obj.selector} { content: ""; position: ${
+							obj.position
+						}; width: ${obj.width}; height: ${obj.height}; bottom: ${
+							obj.bottom
+						}; margin-top: ${obj["margin-top"]}; border-radius: ${
+							obj["border-radius"]
+						}; background: ${colorsArr[index - 1]}; }`;
+					} else if (i === 1) {
+						obj = info.styles[1][0];
+						obj2 = info.styles[1][1];
+						stylesText += ` ${obj.selector} { content: ""; position: ${
+							obj.position
+						}; width: ${obj.width}; height: ${obj.height}; top: ${
+							obj.top
+						}; left: ${obj.left}; border-radius: ${
+							obj["border-radius"]
+						}; background: ${colorsArr[index - 1]};}`;
+						stylesText += ` ${obj2.selector} { content: ""; position: ${
+							obj2.position
+						}; width: ${obj2.width}; height: ${obj2.height}; top: ${
+							obj2.top
+						}; left: ${obj2.left}; border-radius: ${
+							obj2["border-radius"]
+						}; background: ${colorsArr[index - 1]};}`;
+						let sheet = document.createElement("style");
+						sheet.innerHTML = stylesText;
+						document.body.appendChild(sheet);
+					}
 					break;
 			}
 		});
