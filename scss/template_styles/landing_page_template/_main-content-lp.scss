@@ -19,9 +19,11 @@
 	color: $text-color;
 
 	hr {
-		color: $hr-color;
 		width: 35%;
 		margin: 20px auto;
+		height: 1px;
+		border: 0;
+		background: $hr-color;
 	}
 
 	p {

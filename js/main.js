@@ -97,59 +97,87 @@ const dataController = (() => {
 		},
 		landingPage: {
 			htmlText:
-				'<div class="landing-page-template"><!-- NAVBAR --><nav><div><h1>Landing Page</h1><ul><li><a href="#">Features</a></li><li><a href="#">Innovations</a></li><li><a href="#">Prices</a></li><li><a href="#">Testimonials</a></li></ul></div></nav><!-- HEADER SECTION --><header><div class="content"><div class="header-info"><h1>Landing Page is the best solution for you</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi.</p><a href="#">Download App</a></div><div class="header-image"><img src="https://via.placeholder.com/250x350"alt="Header Image"/></div></div></header><!-- FEATURES SECTION --><section class="features-container"><div class="content"><div class="features-info"><h2>Awesome Features</h2><hr /><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class="features-content"><div class="first-info"><div><h3>Simple & Clean</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div><h3>Cross Browser Support</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div><div class="image"><img src="https://via.placeholder.com/250x350"alt="Feature Image"/></div><div class="second-info"><div><h3>Responsive Design</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div><h3>Diferent Colors</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div></section><!-- INNOVATIONS SECTION --><section class="innovation-container"><div class="content"><div class="info"><h2>Touch Innovations</h2><hr /><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><img src="https://via.placeholder.com/350x250"alt="Innovations Image"/><a href="#">Download App</a></div></section><!-- PRICES SECTION --><section class="prices-container"><div class="content"><div class="info"><h2>Our Prices</h2><hr /><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class="prices-content"><ul><li><h3>Basic</h3><div class="price-text"><h3>$0.95</h3><p>per month</p></div><div class="benefits"><p>Enhanced Security</p><p>No Time Tracking</p><p>Enhanced Security</p></div><a href="#">BUY NOW</a></li><li><h3>Basic</h3><div class="price-text"><h3>$0.95</h3><p>per month</p></div><div class="benefits"><p>Enhanced Security</p><p>No Time Tracking</p><p>Enhanced Security</p></div><a href="#">BUY NOW</a></li><li><h3>Basic</h3><div class="price-text"><h3>$0.95</h3><p>per month</p></div><div class="benefits"><p>Enhanced Security</p><p>No Time Tracking</p><p>Enhanced Security</p></div><a href="#">BUY NOW</a></li><li><h3>Basic</h3><div class="price-text"><h3>$0.95</h3><p>per month</p></div><div class="benefits"><p>Enhanced Security</p><p>No Time Tracking</p><p>Enhanced Security</p></div><a href="#">BUY NOW</a></li></ul></div></div></section><!-- TESTIMONIALS SECTION --><section class="testimonials-container"><div class="content"><div class="title"><h2>What People Say About Us</h2><hr /></div><div class="testimonial"><img src="https://via.placeholder.com/100x100"alt="Testimonial Image"/><p class="name">Person Name</p><p class="person-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p><hr /></div></div></section></div>',
+				'<div class="landing-page-template"><!-- NAVBAR --><nav class="navbar-background"><div><h1 class="navbar-color">Landing Page</h1><ul><li><a class="navbar-color" href="#">Features</a></li><li><a class="navbar-color" href="#">Innovations</a></li><li><a class="navbar-color" href="#">Prices</a></li><li><a class="navbar-color" href="#">Testimonials</a></li></ul></div></nav><!-- HEADER SECTION --><header class="header-background"><div class="content"><div class="header-info"><h1 class="header-color">Landing Page is the best solution for you</h1><p class="header-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi.</p><a class="alternative-background header-color" href="#">Download App</a></div><div class="header-image"><img src="https://via.placeholder.com/250x350"alt="Header Image"/></div></div></header><!-- FEATURES SECTION --><section class="features-container features-background"><div class="content"><div class="features-info"><h2 class="features-color">Awesome Features</h2><hr class="features-color" /><p class="features-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class="features-content"><div class="first-info"><div><h3 class="features-color">Simple & Clean</h3><p class="features-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div><h3 class="features-color">Cross Browser Support</h3><p class="features-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div><div class="image"><img src="https://via.placeholder.com/250x350"alt="Feature Image"/></div><div class="second-info"><div><h3 class="features-color">Responsive Design</h3><p class="features-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div><h3 class="features-color">Diferent Colors</h3><p class="features-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div></section><!-- INNOVATIONS SECTION --><section class="innovations-background innovation-container"><div class="content"><div class="info"><h2 class="innovations-color">Touch Innovations</h2><hr class="innovations-color" /><p class="innovations-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><img src="https://via.placeholder.com/350x250"alt="Innovations Image"/><a class="alternative-background innovations-color" href="#">Download App</a></div></section><!-- PRICES SECTION --><section class="prices-background prices-container"><div class="content"><div class="info"><h2 class="prices-color">Our Prices</h2><hr class="prices-color" /><p class="prices-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class="prices-content"><ul><li class="alternative-background"><h3 class="prices-color">Basic</h3><div class="price-text"><h3 class="prices-color">$0.95</h3><p class="prices-color">per month</p></div><div class="benefits"><p class="prices-color">Enhanced Security</p><p class="prices-color">No Time Tracking</p><p class="prices-color">Enhanced Security</p></div><a class="alternative-background prices-color" href="#">BUY NOW</a></li><li class="alternative-background"><h3 class="prices-color">Basic</h3><div class="price-text"><h3 class="prices-color">$0.95</h3><p class="prices-color">per month</p></div><div class="benefits"><p class="prices-color">Enhanced Security</p><p class="prices-color">No Time Tracking</p><p class="prices-color">Enhanced Security</p></div><a class="alternative-background prices-color" href="#">BUY NOW</a></li><li class="alternative-background"><h3 class="prices-color">Basic</h3><div class="price-text"><h3 class="prices-color">$0.95</h3><p class="prices-color">per month</p></div><div class="benefits"><p class="prices-color">Enhanced Security</p><p class="prices-color">No Time Tracking</p><p class="prices-color">Enhanced Security</p></div><a class="alternative-background prices-color" href="#">BUY NOW</a></li><li class="alternative-background"><h3 class="prices-color">Basic</h3><div class="price-text"><h3 class="prices-color">$0.95</h3><p class="prices-color">per month</p></div><div class="benefits"><p class="prices-color">Enhanced Security</p><p class="prices-color">No Time Tracking</p><p class="prices-color">Enhanced Security</p></div><a class="alternative-background prices-color" href="#">BUY NOW</a></li></ul></div></div></section><!-- TESTIMONIALS SECTION --><section class="testimonials-background testimonials-container"><div class="content"><div class="title"><h2 class="testimonials-color">What People Say About Us</h2><hr class="testimonials-color" /></div><div class="testimonial"><img src="https://via.placeholder.com/100x100"alt="Testimonial Image"/><p class="name testimonials-color">Person Name</p><p class="person-text testimonials-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p></div></div></section></div>',
 			domElements: [
 				{
 					name: "navbar-background",
 					index: 1,
+					type: "bg",
 				},
 				{
 					name: "navbar-color",
 					index: 2,
+					type: "color",
 				},
 				{
 					name: "header-background",
 					index: 3,
+					type: "bg",
 				},
 				{
 					name: "header-color",
 					index: 4,
+					type: "color",
 				},
 				{
 					name: "features-background",
 					index: 5,
+					type: "bg",
 				},
 				{
 					name: "features-color",
 					index: 1,
+					type: "color",
+					hr: {
+						index: 1,
+					},
 				},
 				{
 					name: "innovations-background",
 					index: 2,
+					type: "bg",
 				},
 				{
 					name: "innovations-color",
 					index: 3,
+					type: "color",
+					hr: {
+						index: 1,
+					},
 				},
 				{
 					name: "prices-background",
 					index: 4,
+					type: "bg",
 				},
 				{
 					name: "prices-color",
 					index: 5,
+					type: "color",
+					hr: {
+						index: 1,
+					},
 				},
 				{
 					name: "testimonials-background",
 					index: 1,
+					type: "bg",
 				},
 				{
 					name: "testimonials-color",
 					index: 2,
+					type: "color",
+					hr: {
+						index: 1,
+					},
 				},
 				{
-					name: "alternative-color",
+					name: "alternative-background",
 					index: 3,
+					type: "bg",
+					borderColor: {
+						index: [2, 4, 6, 8],
+					},
 				},
 			],
 		},
@@ -201,14 +229,35 @@ const UIController = (() => {
 
 	const changeColors = (index, colorsArr, elements, info) => {
 		let stylesText = "";
-
+		console.log(elements);
 		elements.forEach((e, i) => {
 			switch (info.type) {
 				case "bg":
-					e.style.background = colorsArr[index - 1];
+					let check = false;
+
+					if (info.hasOwnProperty("borderColor")) {
+						info.borderColor.index.forEach((el) => {
+							if (i === el) {
+								e.style.borderColor = colorsArr[index - 1];
+								check = true;
+							}
+						});
+
+						if (!check) e.style.background = colorsArr[index - 1];
+					} else {
+						e.style.background = colorsArr[index - 1];
+					}
 					break;
 				case "color":
-					e.style.color = colorsArr[index - 1];
+					if (info.hasOwnProperty("hr")) {
+						if (i === info.hr.index) {
+							e.style.background = colorsArr[index - 1];
+						} else {
+							e.style.color = colorsArr[index - 1];
+						}
+					} else {
+						e.style.color = colorsArr[index - 1];
+					}
 					break;
 				case "pseudoelement":
 					let obj;

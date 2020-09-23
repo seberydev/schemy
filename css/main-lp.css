@@ -91,9 +91,11 @@
   color: #2e2e2e;
 }
 .landing-page-template .features-container .content .features-info hr {
-  color: #5c5c5c;
   width: 35%;
   margin: 20px auto;
+  height: 1px;
+  border: 0;
+  background: #5c5c5c;
 }
 .landing-page-template .features-container .content .features-info p {
   width: 65%;
@@ -134,9 +136,11 @@
   color: white;
 }
 .landing-page-template .innovation-container .content .info hr {
-  color: #e8e8e8;
   width: 35%;
   margin: 20px auto;
+  height: 1px;
+  border: 0;
+  background: #e8e8e8;
 }
 .landing-page-template .innovation-container .content .info p {
   width: 65%;
@@ -176,9 +180,11 @@
   color: #2e2e2e;
 }
 .landing-page-template .prices-container .content .info hr {
-  color: #5c5c5c;
   width: 35%;
   margin: 20px auto;
+  height: 1px;
+  border: 0;
+  background: #5c5c5c;
 }
 .landing-page-template .prices-container .content .info p {
   width: 65%;
@@ -234,9 +240,11 @@
   color: white;
 }
 .landing-page-template .testimonials-container .content .title hr {
-  color: #e8e8e8;
   width: 35%;
   margin: 20px auto;
+  height: 1px;
+  border: 0;
+  background: #e8e8e8;
 }
 .landing-page-template .testimonials-container .content .title p {
   width: 65%;
