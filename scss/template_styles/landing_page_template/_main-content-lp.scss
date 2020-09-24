@@ -4,12 +4,6 @@
 	padding: 10px 15px;
 	border-radius: 5px;
 	color: white;
-	box-shadow: 0px 2px 2px black;
-	transition: 0.2s all ease-in;
-
-	&:hover {
-		background: $black-text;
-	}
 }
 
 @mixin title-content($hr-color, $text-color) {
@@ -40,6 +34,11 @@ $black-text: #2e2e2e;
 
 /* LANDING PAGE TEMPLATE STYLES */
 .landing-page-template {
+	* {
+		transition: 0.3s all ease-in;
+		cursor: default;
+	}
+
 	/* NAVBAR STYLES */
 	nav {
 		width: 100%;
@@ -65,11 +64,6 @@ $black-text: #2e2e2e;
 
 					a {
 						color: white;
-						transition: 0.2s all ease-in;
-
-						&:hover {
-							font-size: 1.8rem;
-						}
 					}
 				}
 			}

@@ -9,6 +9,10 @@
   /* PRICES SECTION */
   /* TESTIMONIALS SECTION */
 }
+.landing-page-template * {
+  transition: 0.3s all ease-in;
+  cursor: default;
+}
 .landing-page-template nav {
   width: 100%;
   background: #5c5c5c;
@@ -32,10 +36,6 @@
 }
 .landing-page-template nav div ul li a {
   color: white;
-  transition: 0.2s all ease-in;
-}
-.landing-page-template nav div ul li a:hover {
-  font-size: 1.8rem;
 }
 .landing-page-template header {
   background: #a37eba;
@@ -67,12 +67,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
-  box-shadow: 0px 2px 2px black;
-  transition: 0.2s all ease-in;
   align-self: flex-start;
-}
-.landing-page-template header .header-info a:hover {
-  background: #2e2e2e;
 }
 .landing-page-template .features-container {
   background: #e8e8e8;
@@ -154,12 +149,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
-  box-shadow: 0px 2px 2px black;
-  transition: 0.2s all ease-in;
   margin-bottom: 20px;
-}
-.landing-page-template .innovation-container .content a:hover {
-  background: #2e2e2e;
 }
 .landing-page-template .prices-container {
   background: #e8e8e8;
@@ -216,11 +206,6 @@
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
-  box-shadow: 0px 2px 2px black;
-  transition: 0.2s all ease-in;
-}
-.landing-page-template .prices-container .content .prices-content ul li a:hover {
-  background: #2e2e2e;
 }
 .landing-page-template .testimonials-container {
   background: #a37eba;

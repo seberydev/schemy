@@ -14,6 +14,8 @@ $black-text: #3a3b3b;
 	* {
 		font-family: "Arvo", serif;
 		color: $black-text;
+		cursor: default;
+		transition: 0.3s all ease-in;
 	}
 
 	img {
@@ -56,10 +58,6 @@ $black-text: #3a3b3b;
 				a {
 					color: black;
 					transition: 0.2s all ease-in;
-
-					&:hover {
-						font-size: 1.7rem;
-					}
 				}
 			}
 		}
@@ -71,6 +69,7 @@ $black-text: #3a3b3b;
 		margin: 0 auto;
 		background: $secondary-color;
 		padding: 20px;
+		border-radius: 5px;
 
 		h2 {
 			font-size: 2.4rem;
@@ -84,10 +83,6 @@ $black-text: #3a3b3b;
 			background: $main-color;
 			width: 60%;
 			border-radius: 5px;
-
-			&:hover {
-				box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-			}
 
 			/*
 			&::before {
@@ -152,7 +147,10 @@ $black-text: #3a3b3b;
 			background: $secondary-color;
 			padding: 8px;
 			border-radius: 6px;
-			text-align: left;
+			text-align: center;
+			width: 50%;
+			display: flex;
+			justify-content: space-around;
 		}
 
 		.blog-text-container {
@@ -212,6 +210,10 @@ $black-text: #3a3b3b;
 
 		/* CURRENT BLOG STYLES */
 		.current-blog-container {
+			.blog-user-info {
+				width: 100%;
+			}
+
 			.main-blog-image {
 				width: 80%;
 			}

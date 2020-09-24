@@ -65,7 +65,7 @@ const dataController = (() => {
 				},
 				{
 					name: "latest-blogs-color",
-					index: 4,
+					index: 1,
 					type: "color",
 				},
 				{
@@ -111,22 +111,22 @@ const dataController = (() => {
 				},
 				{
 					name: "header-background",
-					index: 3,
+					index: 2,
 					type: "bg",
 				},
 				{
 					name: "header-color",
-					index: 4,
+					index: 1,
 					type: "color",
 				},
 				{
 					name: "features-background",
-					index: 5,
+					index: 1,
 					type: "bg",
 				},
 				{
 					name: "features-color",
-					index: 1,
+					index: 5,
 					type: "color",
 					hr: {
 						index: 1,
@@ -139,7 +139,7 @@ const dataController = (() => {
 				},
 				{
 					name: "innovations-color",
-					index: 3,
+					index: 1,
 					type: "color",
 					hr: {
 						index: 1,
@@ -147,7 +147,7 @@ const dataController = (() => {
 				},
 				{
 					name: "prices-background",
-					index: 4,
+					index: 1,
 					type: "bg",
 				},
 				{
@@ -160,12 +160,12 @@ const dataController = (() => {
 				},
 				{
 					name: "testimonials-background",
-					index: 1,
+					index: 2,
 					type: "bg",
 				},
 				{
 					name: "testimonials-color",
-					index: 2,
+					index: 1,
 					type: "color",
 					hr: {
 						index: 1,
@@ -185,7 +185,7 @@ const dataController = (() => {
 
 	const data = {
 		currentTemplate: "blog",
-		currentColors: ["#E6AF2E", "#A3320B", "#6B0504", "#000000", "#ffffff"],
+		currentColors: ["#7d5a5a", "#f3e1e1", "#f1d1d1", "#000000", "#ffffff"],
 	};
 
 	return {
@@ -225,11 +225,12 @@ const UIController = (() => {
 		closeAboutBtn: "closeAbout",
 		mobileElementsList: "mobileElementsList",
 		allElementsList: ".allElement",
+		scrollE: ".template-container div",
+		scrollColorE: ".color-selector-container",
 	};
 
 	const changeColors = (index, colorsArr, elements, info) => {
 		let stylesText = "";
-		console.log(elements);
 		elements.forEach((e, i) => {
 			switch (info.type) {
 				case "bg":
@@ -277,7 +278,9 @@ const UIController = (() => {
 							obj.bottom
 						}; margin-top: ${obj["margin-top"]}; border-radius: ${
 							obj["border-radius"]
-						}; background: ${colorsArr[index - 1]}; }`;
+						}; background: ${
+							colorsArr[index - 1]
+						}; transition: 0.3s all ease-in;}`;
 					} else if (i === 1) {
 						obj = info.styles[1][0];
 						obj2 = info.styles[1][1];
@@ -287,14 +290,18 @@ const UIController = (() => {
 							obj.top
 						}; left: ${obj.left}; border-radius: ${
 							obj["border-radius"]
-						}; background: ${colorsArr[index - 1]};}`;
+						}; background: ${
+							colorsArr[index - 1]
+						}; transition: 0.3s all ease-in;}`;
 						stylesText += ` ${obj2.selector} { content: ""; position: ${
 							obj2.position
 						}; width: ${obj2.width}; height: ${obj2.height}; top: ${
 							obj2.top
 						}; left: ${obj2.left}; border-radius: ${
 							obj2["border-radius"]
-						}; background: ${colorsArr[index - 1]};}`;
+						}; background: ${
+							colorsArr[index - 1]
+						}; transition: 0.3s all ease-in;}`;
 						let sheet = document.createElement("style");
 						sheet.innerHTML = stylesText;
 						document.body.appendChild(sheet);
@@ -376,8 +383,14 @@ const UIController = (() => {
 			const elementsArr = Array.from(
 				document.querySelectorAll("." + elementInfo.name)
 			);
-
+			console.log(e, setIndex, colors);
 			changeColors(currentIndex, colors, elementsArr, elementInfo);
+		},
+		updateElementsColor: (dataObj, templatesObj) => {
+			templatesObj[dataObj.currentTemplate].domElements.forEach((e) => {
+				let allElements = Array.from(document.querySelectorAll("." + e.name));
+				changeColors(e.index, dataObj.currentColors, allElements, e);
+			});
 		},
 	};
 })();
@@ -390,14 +403,18 @@ const controller = ((UI, DATA) => {
 
 	/* ADD DOM EVENTS */
 	const addEvents = () => {
-		document
-			.getElementById(DOM.currentTemplateE)
-			.addEventListener("change", (e) => {
-				allData.currentTemplate = e.target.value;
-				UI.changeTemplate(allData.currentTemplate, temp);
-				UI.addDOMElements(temp[allData.currentTemplate].domElements);
-				UI.setIndexE(temp[allData.currentTemplate].domElements);
-			});
+		const templateContainerE = document.getElementById(DOM.currentTemplateE);
+
+		templateContainerE.addEventListener("change", (e) => {
+			allData.currentTemplate = e.target.value;
+			UI.changeTemplate(allData.currentTemplate, temp);
+			UI.addDOMElements(temp[allData.currentTemplate].domElements);
+			UI.setIndexE(temp[allData.currentTemplate].domElements);
+			UI.updateElementsColor(allData, temp);
+			scrollEvent();
+		});
+
+		scrollEvent();
 
 		const colInputs = UI.getColorInputs();
 
@@ -406,6 +423,7 @@ const controller = ((UI, DATA) => {
 				if (UI.validHex(input.target.value)) {
 					allData.currentColors[input.target.id] = input.target.value;
 					UI.changeColors(allData.currentColors);
+					UI.updateElementsColor(allData, temp);
 				}
 			});
 		});
@@ -433,6 +451,23 @@ const controller = ((UI, DATA) => {
 		});
 	};
 
+	const scrollEvent = () => {
+		let scrollTimeout;
+		const templateE = document.getElementById(DOM.currentTemplateE);
+		const colorsE = document.querySelector(DOM.scrollColorE);
+
+		document.querySelector(DOM.scrollE).addEventListener("wheel", () => {
+			templateE.style.opacity = "0.3";
+			colorsE.style.opacity = "0.3";
+			this.clearTimeout(scrollTimeout);
+
+			scrollTimeout = setTimeout(() => {
+				templateE.style.opacity = "1";
+				colorsE.style.opacity = "1";
+			}, 400);
+		});
+	};
+
 	return {
 		init: () => {
 			console.log("App has started...");
@@ -443,6 +478,7 @@ const controller = ((UI, DATA) => {
 			addEvents();
 			UI.changeColors(allData.currentColors);
 			UI.setIndexE(temp[allData.currentTemplate].domElements);
+			UI.updateElementsColor(allData, temp);
 		},
 	};
 })(UIController, dataController);
